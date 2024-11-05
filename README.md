@@ -24,5 +24,5 @@ $$
 ```
 with $\psi_c=3$ and 2 for 20\% and 40\% censoring, respectively. 
 
-The R code for generating the data is `datagen_dd.R`. The R code for implementing the examples with different longitudinal balancing scores are "dd_BART_bs.R", "dd_BART_cov.R", and "dd_BART_cov+bs.R". The R code for the simulation in the arXiv paper "A flexible Bayesian g-formula for causal survival analyses with time-dependent confounding" is given in the folder "code_sim". 
+The R code for generating the data is `datagen_dd.R`. The R code for implementing the examples with different longitudinal balancing scores are `dd_BART_bs.R`, `dd_BART_cov.R`, and `dd_BART_cov+bs.R`. The R code for the simulation in the arXiv paper "A flexible Bayesian g-formula for causal survival analyses with time-dependent confounding" is given in the folder `code_sim`. 
 
