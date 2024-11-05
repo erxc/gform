@@ -17,9 +17,6 @@ library(Hmisc)
 
 source("datagen_dd.R")
 
-set.seed(1227)
-seeds <- floor(runif(1000)*10^8)
-
 bart_bs_gform_func <- function(m){
   
   set.seed(seeds[m])
@@ -114,9 +111,8 @@ bart_bs_gform_func <- function(m){
   ## estimate omega
   dffull$pred_obsc <- 1 - bart_cmodel$prob.train.mean
   ## overall ps
-  dffull$E <- dffull$pred_obs * dffull$pred_obsc
-  # dffull$E <- (dffull$pred_obs*dffull$A + (1-dffull$pred_obs)*(1-dffull$A)) * 
-  #   dffull$pred_obsc 
+  dffull$E <- (dffull$pred_obs*dffull$A + (1-dffull$pred_obs)*(1-dffull$A)) * 
+    dffull$pred_obsc 
   ## overall logit ps
   dffull$logE <- logit(dffull$E)                                                         
   # create lags
