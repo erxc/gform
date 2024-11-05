@@ -18,9 +18,6 @@ library(Hmisc)
 
 source("datagen_dd_sim.R")
 
-set.seed(0919)
-seeds <- floor(runif(1000)*10^8)
-
 bart_bs_gform_func <- function(m){
   
   set.seed(seeds[m])
