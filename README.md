@@ -30,5 +30,5 @@ $$
 ```
 with $\psi_c=3$ and 1.5 for 20\% and 50\% censoring, respectively. We want to evaluate the counterfactual risks under the treatment strategy $A_t = L_{t,2} > 0.2$, for $t=0$, and $A_t=L_{t,2} > 0.2\rvert A_{t-1}$, for $t=1,\ldots,T-1$. 
 
-The R code for generating the data is `datagen_dd_sim.R`. The `R` code for implementing the examples with different longitudinal balancing scores are `dd_BART_bs_sim.R`, `dd_BART_cov_sim.R`, and `dd_BART_cov+bs_sim.R`.
+The `R` code for generating the data is `datagen_dd_sim.R`. The `R` code for implementing the examples with different longitudinal balancing scores are `dd_BART_bs_sim.R`, `dd_BART_cov_sim.R`, and `dd_BART_cov+bs_sim.R`.
 
