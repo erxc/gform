@@ -13,19 +13,19 @@ The example demonstrates the implementation of the Bayesian additive regression 
 where $L_{t,1}=1$ if $L_{t-1,1}=1$, and otherwise it is generated from a Bernoulli distribution with parameter $\Psi(-2A_{t-1}+0.2L_{t-1,1})$. For $t=0$, we have $L_{0,1}\sim B(0.5)$, and $L_{0,2},L_{0,3}\sim N(0,0.1^2)$. The treatment assignment is determined according to the following process: 
 ```math
 $$
-    A_t  \sim B(\Psi(-0.5 - L_{t,1}\cos(0.75L_{t,2}) - 0.5L_{t,2}L_{t,3})).
+    A_t  \sim B\left(\Psi(-0.5 - L_{t,1}\cos(0.75L_{t,2}) - 0.5L_{t,2}L_{t,3})\right).
 $$
 ```
 .The outcome at time $t$ was generated as:
 ```math
 $$
-Y_t\sim B(\Psi(-2-3A_{t-1}-1L_{t-1,1}-6L_{t-1,2}L_{t-1,3}+6L_{t-1,1}L_{t-1,2}^2),
+Y_t\sim B\left(\Psi(-2-3A_{t-1}-1L_{t-1,1}-6L_{t-1,2}L_{t-1,3}+6L_{t-1,1}L_{t-1,2}^2\right),
 $$
 ```
 for $t=1,\ldots,T$. Two levels of censoring rates were considered:
 ```math
 $$
-    C_t \sim B(\Psi(-\psi_c-A_{t-1}+0.75L_{t-1,1}\cos(-0.5L_{t-1,2})-0.5L_{t-1,2}L_{t-1,3})),
+    C_t \sim B\left(\Psi(-\psi_c-A_{t-1}+0.75L_{t-1,1}\cos(-0.5L_{t-1,2})-0.5L_{t-1,2}L_{t-1,3})\right),
 $$
 ```
 with $\psi_c=2$ and 1.5 for 20\% and 50\% censoring, respectively. We want to evaluate the counterfactual risks under the treatment strategy $A_t = L_{t,2} > 0.2$, for $t=0$, and $A_t=L_{t,2} > 0.2\rvert A_{t-1}$, for $t=1,\ldots,T-1$. 
