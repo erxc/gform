@@ -28,7 +28,7 @@ $$
     C_t \sim B\left(\Psi(-\psi_c-A_{t-1}+0.75L_{t-1,1}\cos(-0.5L_{t-1,2})-0.5L_{t-1,2}L_{t-1,3})\right),
 $$
 ```
-with $\psi_c=2$ and 1.5 for 20\% and 50\% censoring, respectively. We want to evaluate the counterfactual risks under the treatment strategy $A_t = L_{t,2} > 0.2$, for $t=0$, and $A_t=L_{t,2} > 0.2\rvert A_{t-1}$, for $t=1,\ldots,T-1$. 
+with $\psi_c=3$ and 1.5 for 20\% and 50\% censoring, respectively. We want to evaluate the counterfactual risks under the treatment strategy $A_t = L_{t,2} > 0.2$, for $t=0$, and $A_t=L_{t,2} > 0.2\rvert A_{t-1}$, for $t=1,\ldots,T-1$. 
 
 The R code for generating the data is `datagen_dd_sim.R`. The R code for implementing the examples with different longitudinal balancing scores are `dd_BART_bs_sim.R`, `dd_BART_cov_sim.R`, and `dd_BART_cov+bs_sim.R`.
 
