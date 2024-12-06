@@ -1,6 +1,6 @@
 # Bayesian machine learning g-formula for survival outcomes
 
-This repository contains the R code and an example of the Bayesian machine learning g-formula for survival outcomes.
+This repository contains the `R` code and an example of the Bayesian machine learning g-formula for survival outcomes.
 
 The example demonstrates the implementation of the Bayesian additive regression tree (BART)-based g-formula methods in a situation concerning a dynamic deterministic treatment strategy considered. The specific setting is as follows: $N=500$ individuals are included in a longitudinal observational study across $T=5$ periods. Three confounders are simulated, $L_t=(L_{t,1},L_{t,2},L_{t,3})'$, where $L_{t,1}$ is a binary variable, and $L_{t,2}$ and $L_{t,3}$ are continuous, with $L_{t,2}$ designed as the tailoring variable for the treatment strategy. The following generative models for the confounders, that is, for $t=1,\ldots,T-1$,
 ```math
